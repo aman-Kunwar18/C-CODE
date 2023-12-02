@@ -17,7 +17,7 @@ int main()
                 if (j != i && arr[i] == arr[j])
                 {
                     c = 0;
-                    break;
+                    break; 
                 }
             }
 
