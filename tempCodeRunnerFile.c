@@ -1,22 +1,21 @@
 #include <stdio.h>
-int main(){
-    int arr[4][4]={
-        {1,2,3,4},
-        {2,3,4,5},
-        {3,4,5,6},
-        {4,5,6,7}
-        };
+int main()
+{
+    int num;
+    printf("ENTER THE NUMBER\n");
+    scanf("%d",&num);
+    int n=num;
     int sum=0;
-    for(int i=0;i<4;i++){
-        for(int j=0;j<4;j++){
-            if(i==0 || j==0 || i==3 || j==3){
-                sum=sum+arr[i][j];
-            }
-            else{
-                   continue; 
-            }
-        }
+    while(n>0){
+       int rem = n%10;
+        rem = rem*rem*rem;
+        sum = sum+rem;
+        n=n/10;
     }
-    printf("the sum is %d " ,sum);
-
+    if(num == sum){
+        printf("%d is a armstrong number\n" , num);
+    }
+    else{
+        printf("%d is not  a armstrong number\n" , num);
+    }
 }
